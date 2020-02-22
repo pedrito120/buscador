@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<app-spiner></app-spiner>
+<div  class="col-4" *ngFor="let d of data">
+    <img class="card-img-top" src="{{d.img}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{d.titulo}}</h5>
+      <h5 class="card-title">{{d.autor}}</h5>
+      <p class="card-text">{{d.date}}</p>
+    </div>
+  </div>
+
+  <div class="col-">
+    <img class="card-img-top" src="{{d.img}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{d.titulo}}</h5>
+      <h5 class="card-title">{{d.autor}}</h5>
+      <p class="card-text">{{d.date}}</p>
+    </div>
+  </div>

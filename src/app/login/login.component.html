@@ -1,0 +1,21 @@
+<br><br>
+<br>
+<br><div class="form">
+    <div class="container">
+        <form #formLogin="ngForm" (submit)="login()">
+            <label class="mr-sm-2">
+                Username: <br>
+                <input type="text"  id="user" name="user" [(ngModel)]="email" class="form-control mb-2 mr-sm-2">
+            </label>
+            <br>
+            <label class="mr-sm-2">
+                Password: <br>
+                <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control mb-2 mr-sm-2" >
+            </label>
+           
+            <br>
+            <button type="submit" class="btn btn-secondary mb-2">Entrar</button>
+            
+        </form >
+    </div>
+</div>

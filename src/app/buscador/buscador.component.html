@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<br><br>
+<br>
+<br><div class="form">
+    <div class="container">
+        <form #formLogin="ngForm" (submit)="busqueda()">
+            <label class="mr-sm-2">
+                Busqueda: <br>
+                <input type="text"  id="buscar" name="buscar" [(ngModel)]="buscar" class="form-control mb-2 mr-sm-2">
+            </label>
+            <br>
+            
+           
+            <br>
+            <button type="submit" class="btn btn-secondary mb-2">Entrar</button>
+            <button (click)="metodo()">usuario</button>
+        </form >
+    </div>
+</div>
+<hr>
+<br>
+<br>
+<div class="card" style="width: 18rem;" *ngFor="let d of data">
+    <img class="card-img-top" src="{{d.volumeInfo.imageLinks.thumbnail}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{d.volumeInfo.title}}</h5>
+      <h5 class="card-title">{{d.volumeInfo.authors}}</h5>
+      <p class="card-text">{{d.volumeInfo.publishedDate}}</p>
+      <a (click)="subir(d.volumeInfo.title,d.volumeInfo.authors,d.volumeInfo.publishedDate,d.volumeInfo.imageLinks.thumbnail,d.id)" class="btn btn-primary">Agregar a preferencias</a>
+    </div>
+  </div>
